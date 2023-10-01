@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      article {
+        border: 1px solid black;
+        padding: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      img {
+        height: auto;
+        width: 320px;
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <footer>
+      <h1>Blog</h1>
+    </footer>
+    <main></main>
+    <script type="module">
+      fetch("https://thr-backend-w0ns-dev.fl0.io/blog")
+        .then((res) => res.json())
+        .then((blog) => {
+          const html = blog
+            .map((product) => {
+              return `
+                <article data-id="${product.id_blog}">
+                  <h2>${product.titulo_blog}</h2>
+                  <img src="${product.thumb_blog}" alt=${product.product}>
+                  <p>${product.info_blog}</p>
+                  <button>Eliminar</button>
+                </article>  
+              `;
+            })
+            .join("");
+
+          document.querySelector("main").innerHTML = html;
+
+          document.addEventListener("click", (e) => {
+            if (e.target.matches("button")) {
+              const article = e.target.closest("article");
+              const id = article.dataset.id;
+
+              fetch(`https://thr-backend-w0ns-dev.fl0.io/blog/${id}`, {
+                method: "DELETE",
+              }).then((res) => {
+                if (res.ok) {
+                  article.remove();
+                }
+              });
+            }
+          });
+        });
+    </script>
+  </body>
+</html>
