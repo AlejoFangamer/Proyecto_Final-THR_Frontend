@@ -4,59 +4,60 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      article {
-        border: 1px solid black;
-        padding: 1rem;
-        margin-bottom: 1rem;
-      }
-
-      img {
-        height: auto;
-        width: 320px;
-        max-width: 100%;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <footer>
-      <h1>Blog</h1>
-    </footer>
+    <main>
+      <div id="blog">
+        <section class="titulo-desc">
+          <h1 class="titulo">Ringo-Blog</h1>
+          <p>Bienvenido a nuestro Blog !</p>
+          <p>Donde compartimos las noticias de nuestros proyectos y mas sobre el mundo del desarrollo de videojuegos</p>
+        </section>
+
+        <section class="formulario">
+          <form id="miFormulario">
+            <label for="autor">Autor:</label>
+            <input type="text" id="autor" name="autor_blog" required>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="titulo_blog" required>
+
+            <label for="imagen">Imagen(Url):</label>
+            <input type="text" id="imagen" name="thumb_blog">
+            
+            <label for="mensaje">Descripcion:</label>
+            <textarea id="mensaje" name="info_blog" required></textarea>
+            
+            <button type="submit">Enviar</button>
+          </form>
+        </section>
+
+        <section class="blog">
+          <p id="loading-blog">Cargando...</p>
+          <ul id="blog-lista"></ul>
+          <template id="blog-template">
+            <li class="blog-item">
+              <h2 class="blog-titulo"></h2>
+              <div class="author-date-container">
+                <p class="blog-autor"></p>
+                <p class="blog-fecha"></p>
+              </div>
+              <div class="img-container">
+                <img class="blog-imagen" src="" alt="" />
+              </div>
+              <p class="blog-desc"></p>
+            </li>
+          </template>
+        </section>
+      </div>
+    </main>
     <main></main>
-    <script type="module">
-      fetch("https://thr-backend-w0ns-dev.fl0.io/blog")
-        .then((res) => res.json())
-        .then((blog) => {
-          const html = blog
-            .map((product) => {
-              return `
-                <article data-id="${product.id_blog}">
-                  <h2>${product.titulo_blog}</h2>
-                  <img src="${product.thumb_blog}" alt=${product.product}>
-                  <p>${product.info_blog}</p>
-                  <button>Eliminar</button>
-                </article>  
-              `;
-            })
-            .join("");
-
-          document.querySelector("main").innerHTML = html;
-
-          document.addEventListener("click", (e) => {
-            if (e.target.matches("button")) {
-              const article = e.target.closest("article");
-              const id = article.dataset.id;
-
-              fetch(`https://thr-backend-w0ns-dev.fl0.io/blog/${id}`, {
-                method: "DELETE",
-              }).then((res) => {
-                if (res.ok) {
-                  article.remove();
-                }
-              });
-            }
-          });
-        });
-    </script>
+    <script type="module" src="./script.js"></script>
   </body>
 </html>

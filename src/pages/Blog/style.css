@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+#blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  font-family: 'Poppins', sans-serif;
+
+  gap: 50px;
+}
+
+.titulo-desc {
+  text-align: center;
+}
+
+.titulo {
+  font-size: 4em;
+}
+
+#blog-lista {
+  max-width: 800px;
+}
+
+.blog-item {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  margin-bottom: 1rem;
+  list-style-type: none;
+  gap: 10px;
+
+  border-radius: 25px;
+  box-shadow: 4px 4px 10px rgb(88, 96, 109);
+  width: 100%;
+}
+
+.blog-titulo {
+  line-height: 1em;
+  font-size: 3em;
+}
+
+.img-container {
+  display: flex;
+  width: 100%; /* Ancho deseado para el contenedor */
+  height: 400px; /* Altura deseada para recortar la imagen */
+  overflow: hidden; /* Recorta el contenido que se desborda del contenedor */
+}
+
+img { 
+  width: 100%;/* La imagen se ajustará al ancho del contenedor */
+  height: 400px; /* La altura se ajustará automáticamente para mantener la relación de aspecto */
+  object-fit: cover; /* La imagen se recortará para llenar completamente el contenedor */
+}
