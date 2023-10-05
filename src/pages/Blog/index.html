@@ -17,23 +17,35 @@
         <section class="titulo-desc">
           <h1 class="titulo">Ringo-Blog</h1>
           <p>Bienvenido a nuestro Blog !</p>
-          <p>Donde compartimos las noticias de nuestros proyectos y mas sobre el mundo del desarrollo de videojuegos</p>
+          <p>
+            Donde compartimos las noticias de nuestros proyectos y mas sobre el
+            mundo del desarrollo de videojuegos
+          </p>
         </section>
 
         <section class="formulario">
           <form id="miFormulario">
-            <label for="autor">Autor:</label>
-            <input type="text" id="autor" name="autor_blog" required>
+            <div class="item">
+              <label for="nombre">Titulo:</label>
+              <input type="text" id="nombre" name="titulo_blog" required />
+            </div>
 
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="titulo_blog" required>
+            <div class="aut-img">
+              <div class="item">
+                <label for="autor">Autor:</label>
+                <input type="text" id="autor" name="autor_blog" required />
+              </div>
+              <div class="item">
+                <label for="imagen">Imagen(Url):</label>
+                <input type="text" id="imagen" name="thumb_blog" />
+              </div>
+            </div>
 
-            <label for="imagen">Imagen(Url):</label>
-            <input type="text" id="imagen" name="thumb_blog">
-            
-            <label for="mensaje">Descripcion:</label>
-            <textarea id="mensaje" name="info_blog" required></textarea>
-            
+            <div class="item">
+              <label for="mensaje">Descripcion:</label>
+              <textarea id="mensaje" name="info_blog" required></textarea>
+            </div>
+
             <button type="submit">Enviar</button>
           </form>
         </section>
@@ -43,15 +55,17 @@
           <ul id="blog-lista"></ul>
           <template id="blog-template">
             <li class="blog-item">
-              <h2 class="blog-titulo"></h2>
-              <div class="author-date-container">
-                <p class="blog-autor"></p>
-                <p class="blog-fecha"></p>
-              </div>
               <div class="img-container">
                 <img class="blog-imagen" src="" alt="" />
               </div>
-              <p class="blog-desc"></p>
+              <div class="blog-info-container">
+                <h2 class="blog-titulo"></h2>
+                <div class="author-date-container">
+                  <p class="blog-autor"></p>
+                  <p class="blog-fecha"></p>
+                </div>
+                <p class="blog-desc"></p>
+              </div>
             </li>
           </template>
         </section>
