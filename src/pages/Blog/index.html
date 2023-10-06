@@ -37,7 +37,7 @@
               </div>
               <div class="item">
                 <label for="imagen">Imagen(Url):</label>
-                <input type="text" id="imagen" name="thumb_blog" />
+                <input type="url" id="imagen" name="thumb_blog" />
               </div>
             </div>
 
@@ -46,7 +46,7 @@
               <textarea id="mensaje" name="info_blog" required></textarea>
             </div>
 
-            <button type="submit">Enviar</button>
+            <button type="submit" id = "submitBtn">Enviar</button>
           </form>
         </section>
 
@@ -55,23 +55,96 @@
           <ul id="blog-lista"></ul>
           <template id="blog-template">
             <li class="blog-item">
-              <div class="img-container">
-                <img class="blog-imagen" src="" alt="" />
+              <div class="blog-buttons">
+                <button class="opt-btn erase">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-trash"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M4 7l16 0"></path>
+                    <path d="M10 11l0 6"></path>
+                    <path d="M14 11l0 6"></path>
+                    <path
+                      d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"
+                    ></path>
+                    <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"></path>
+                  </svg>
+                </button>
+                <button class="opt-btn edit">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                      d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1"
+                    ></path>
+                    <path
+                      d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z"
+                    ></path>
+                    <path d="M16 5l3 3"></path>
+                  </svg>
+                </button>
+                <button class="opt-btn edit-confirm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-device-floppy"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                      d="M6 4h10l4 4v10a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2"
+                    ></path>
+                    <path d="M12 14m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                    <path d="M14 4l0 4l-6 0l0 -4"></path>
+                  </svg>
+                </button>
               </div>
-              <div class="blog-info-container">
-                <h2 class="blog-titulo"></h2>
-                <div class="author-date-container">
-                  <p class="blog-autor"></p>
-                  <p class="blog-fecha"></p>
+
+              <div class="info-container">
+                <div class="img-container">
+                  <img class="blog-imagen" src="" alt="" />
                 </div>
-                <p class="blog-desc"></p>
+                <div class="blog-info-container">
+                  <h2 class="blog-titulo"></h2>
+                  <div class="author-date-container">
+                    <p class="blog-autor"></p>
+                    <p class="blog-fecha"></p>
+                  </div>
+                  <p class="blog-desc"></p>
+                </div>
               </div>
             </li>
           </template>
         </section>
       </div>
     </main>
-    <main></main>
+    <div id="loading-overlay">
+      <div class="loading-spinner"></div>
+    </div>
     <script type="module" src="./script.js"></script>
   </body>
 </html>
