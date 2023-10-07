@@ -5,13 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../Menu/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
       rel="stylesheet"
     />
+    <!-- <link href="dist/hamburgers.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css" integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
+    <div id="background"></div>
+
+    <header>
+      <div id="menu">
+        <div class="menu-left-side">
+          <img src="./icons/THRLogo.jpg" alt="" class="menu-icon">
+          <h2 class="menu-titulo">TEAM HAPPY RINGO</h2>
+        </div>
+
+        <nav id="menu-nav">
+          <a href="" class="menu-option">Quienes Somos?</a>
+          <a href="" class="menu-option">Miembros</a>
+          <a href="" class="menu-option">Juegos</a>
+          <a href="" class="menu-option">Happy-Blog</a>
+        </nav>
+
+        <button class="hamburger hamburger--collapse" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
+    </header>
+
+    
+
     <main>
       <div id="blog">
         <section class="titulo-desc">
@@ -35,6 +64,7 @@
                 <label for="autor">Autor:</label>
                 <input type="text" id="autor" name="autor_blog" required />
               </div>
+
               <div class="item">
                 <label for="imagen">Imagen(Url):</label>
                 <input type="url" id="imagen" name="thumb_blog" />
@@ -142,6 +172,7 @@
         </section>
       </div>
     </main>
+    <div id="pause"></div>
     <div id="loading-overlay">
       <div class="loading-spinner"></div>
     </div>

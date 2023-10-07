@@ -5,15 +5,37 @@
   font-family: 'Poppins', sans-serif;
 }
 
-#blog {
+#background {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(45deg, rgba(112,71,136,1) 0%, rgba(85,175,255,1) 100%);
+  z-index: -1;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+#blog{
+  position: relative;
+  top: calc(var(--menu-size) + (var(--menu-margin))/2);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 50px;
+  border-radius: 25px;
 
   max-width: 1000px;
   gap: 50px;
-  scrollbar-gutter: stable both-edges;
+  scrollbar-gutter: stable;
+  z-index: 999;
+  background-color: white;
 }
 
 .titulo-desc {
@@ -73,6 +95,7 @@ textarea {
   margin-bottom: 1rem;
   gap: 10px;
   width: 100%;
+  height: 100%;
   overflow-wrap: anywhere;
 }
 
@@ -123,7 +146,7 @@ textarea {
   color: rgb(131, 131, 131);
 }
 
-img { 
+.blog-imagen { 
   width: 100%;
   height: 100%;
   object-fit: cover;

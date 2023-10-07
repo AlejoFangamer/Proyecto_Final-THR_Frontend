@@ -5,15 +5,13 @@ export function checkInputs() {
   const descInput = document.getElementById("mensaje");
   const submitButton = document.getElementById("submitBtn");
 
-  const urlRegex = /^(https?:\/\/)?([\w-]+(\.[\w-]+)+)(\/[\w-]*)*\/?$/;
-
   const validateFields = () => {
     const isURLValid = urlInput.value.trim() !== "";
     const isNameValid = tituloInput.value.trim() !== "";
     const isAutorValid = autorInput.value.trim() !== "";
     const isDescValid = descInput.value.trim() !== "";
 
-    if (isNameValid && isAutorValid && isDescValid & isURLValid) {
+    if (isNameValid && isAutorValid && isDescValid) {
       submitButton.disabled = false;
     } else {
       submitButton.disabled = true;
@@ -24,4 +22,5 @@ export function checkInputs() {
   tituloInput.addEventListener("input", validateFields);
   autorInput.addEventListener("input", validateFields);
   descInput.addEventListener("input", validateFields);
+  validateFields();
 }
