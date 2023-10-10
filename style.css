@@ -22,7 +22,7 @@ main {
   padding: 20px;
   align-items: center;
   width: 100%;
-  height: calc(100vh - var(--menu-size) + (var(--menu-margin)) / 2 - 40px);
+  height: calc(100vh - var(--menu-size) + (var(--menu-margin)) / 2 - 40px - 100px);
   position: relative;
   top: calc(var(--menu-size) + (var(--menu-margin)) / 2);
   overflow: hidden;
