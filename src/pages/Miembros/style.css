@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  /*scrollbar-gutter: stable both-edges;*/
+}
+
+#background {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(45deg, rgba(112,71,136,1) 0%, rgb(255, 213, 135) 100%);
+  z-index: -1;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+#miembros{
+  position: relative;
+  top: calc(var(--menu-size) + (var(--menu-margin))/2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  border-radius: 25px;
+
+  max-width: 1000px;
+  gap: 50px;
+  z-index: 999;
+  background-color: white;
+  overflow: hidden;
+}
+
+.titulo-desc {
+  text-align: center;
+}
+
+.titulo {
+  font-size: 4em;
+}
+
+#mem-lista {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+  gap: 20px;
+  list-style: none;
+  width: 100%;
+}
+
+.mem-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  overflow-wrap: anywhere;
+}
+
+.img-container {
+  display: flex;
+  width: 100%; /* Ancho deseado para el contenedor */
+  height: 300px; /* Altura deseada para recortar la imagen */
+  overflow: hidden; /* Recorta el contenido que se desborda del contenedor */
+}

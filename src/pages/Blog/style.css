@@ -3,6 +3,7 @@
   box-sizing: border-box;
   padding: 0;
   font-family: 'Poppins', sans-serif;
+  /*scrollbar-gutter: stable both-edges;*/
 }
 
 #background {
@@ -33,9 +34,9 @@ main {
 
   max-width: 1000px;
   gap: 50px;
-  scrollbar-gutter: stable;
   z-index: 999;
   background-color: white;
+  overflow: hidden;
 }
 
 .titulo-desc {
