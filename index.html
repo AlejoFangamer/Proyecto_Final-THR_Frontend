@@ -1,14 +1,193 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Team Happy Ringo</title>
+    <link rel="stylesheet" href="./src/pages/Menu/styles.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="app"></div>
-    <a href="/src/pages/Blog/index.html">Blog</a>
+    <div id="background"></div>
+    <header>
+      <div id="menu">
+        <div class="menu-left-side">
+          <img
+            src="./src/pages/Blog/icons/THRLogo.jpg"
+            alt=""
+            class="menu-icon"
+          />
+          <h2 class="menu-titulo">TEAM HAPPY RINGO</h2>
+        </div>
+
+        <nav id="menu-nav">
+          <a href="" class="menu-option">Quienes Somos?</a>
+          <a href="" class="menu-option">Miembros</a>
+          <a href="" class="menu-option">Juegos</a>
+          <a href="" class="menu-option">Happy-Blog</a>
+        </nav>
+
+        <button class="hamburger hamburger--collapse" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <div id="landing-page">
+        <section id="textos-izq">
+          <h2 class="txt textos-titulo1">Creamos</h2>
+          <h1 class="txt textos-titulo2 txt-his">HISTORIAS</h1>
+          <h1 class="txt textos-titulo2 txt-div">DIVERSIÓN</h1>
+          <h1 class="txt textos-titulo2 txt-adv">AVENTURAS</h1>
+          <h1 class="txt textos-titulo2 txt-exp">EXPERIENCIAS</h1>
+
+          <button href="" class="textos-btn txt">Sobre nosotros</button>
+        </section>
+        <section id="img-der">
+          <img
+            class="img-der-img"
+            src="src/pages/Blog/icons/THRLogo.jpg"
+            alt=""
+          />
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <section id="social-media">
+        <a
+          href="https://www.reddit.com/user/TeamHappyRingo"
+          class="sm-btn"
+          target="_blank"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-brand-reddit"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M12 8c2.648 0 5.028 .826 6.675 2.14a2.5 2.5 0 0 1 2.326 4.36c0 3.59 -4.03 6.5 -9 6.5c-4.875 0 -8.845 -2.8 -9 -6.294l-1 -.206a2.5 2.5 0 0 1 2.326 -4.36c1.646 -1.313 4.026 -2.14 6.674 -2.14z"
+            ></path>
+            <path d="M12 8l1 -5l6 1"></path>
+            <path d="M19 4m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+            <circle cx="9" cy="13" r=".5" fill="currentColor"></circle>
+            <circle cx="15" cy="13" r=".5" fill="currentColor"></circle>
+            <path d="M10 17c.667 .333 1.333 .5 2 .5s1.333 -.167 2 -.5"></path>
+          </svg>
+        </a>
+
+        <a
+          href="https://twitter.com/TeamHappyRingo"
+          class="sm-btn"
+          target="_blank"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-brand-x"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+            <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+          </svg>
+        </a>
+
+        <a
+          href="https://www.youtube.com/channel/UCO3n-FdFPKQlf-5ZHKeEYsQ"
+          class="sm-btn"
+          target="_blank"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-brand-youtube-filled"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M18 3a5 5 0 0 1 5 5v8a5 5 0 0 1 -5 5h-12a5 5 0 0 1 -5 -5v-8a5 5 0 0 1 5 -5zm-9 6v6a1 1 0 0 0 1.514 .857l5 -3a1 1 0 0 0 0 -1.714l-5 -3a1 1 0 0 0 -1.514 .857z"
+              stroke-width="0"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </a>
+
+        <a
+          href="https://www.twitch.tv/teamhappyringo"
+          class="sm-btn"
+          target="_blank"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-brand-twitch"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M4 5v11a1 1 0 0 0 1 1h2v4l4 -4h5.584c.266 0 .52 -.105 .707 -.293l2.415 -2.414c.187 -.188 .293 -.442 .293 -.708v-8.585a1 1 0 0 0 -1 -1h-14a1 1 0 0 0 -1 1z"
+            ></path>
+            <path d="M16 8l0 4"></path>
+            <path d="M12 8l0 4"></path>
+          </svg>
+        </a>
+        <a
+          href="https://steamcommunity.com/id/TeamHappyRingo/"
+          class="sm-btn"
+          target="_blank"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-brand-steam"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M16.5 5a4.5 4.5 0 1 1 -.653 8.953l-4.347 3.009l0 .038a3 3 0 0 1 -2.824 3l-.176 0a3 3 0 0 1 -2.94 -2.402l-2.56 -1.098v-3.5l3.51 1.755a2.989 2.989 0 0 1 2.834 -.635l2.727 -3.818a4.5 4.5 0 0 1 4.429 -5.302z"
+            ></path>
+            <circle cx="16.5" cy="9.5" r="1" fill="currentColor"></circle>
+          </svg>
+        </a>
+      </section>
+    </footer>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

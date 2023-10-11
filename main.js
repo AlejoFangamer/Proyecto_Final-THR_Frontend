@@ -1,23 +1,29 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import anime from "animejs";
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
-setupCounter(document.querySelector('#counter'))
+document.addEventListener("DOMContentLoaded", () => {
+  anime({
+    targets: "#textos-izq .txt",
+    opacity: 1,
+    translateX: [-50, 0],
+    delay: anime.stagger(200),
+  });
+
+  anime({
+    targets: "#img-der",
+    opacity: [0, 1],
+    translateX: [50, 0],
+    duration: 1000,
+    delay: 900, // increase delay by 100ms for each elements.
+  });
+
+  anime({
+    targets: "#background",
+    background: [
+      "linear-gradient(45deg, rgb(27, 21, 48) 100%, rgb(41, 66, 145) 100%)",
+      "linear-gradient(45deg, rgb(27, 21, 48) 0%, rgb(41, 66, 145) 100%)",
+    ],
+    easing: "easeOutQuad",
+    duration: 5000,
+    delay: 500, // increase delay by 100ms for each elements.
+  });
+});
