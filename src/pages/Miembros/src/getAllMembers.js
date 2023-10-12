@@ -1,4 +1,6 @@
+import anime from "animejs";
 import ScrollReveal from "scrollreveal";
+import { containerOverlay } from "./containerOverlayCtr";
 
 export function getAllMembers() {
   const memList = document.getElementById("mem-lista");
@@ -37,5 +39,7 @@ export function getAllMembers() {
       } else {
         crearPost(mem);
       }
+
+      containerOverlay();
     });
 }

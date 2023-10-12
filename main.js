@@ -2,7 +2,7 @@ import anime from "animejs";
 import { menuAnimations } from "./src/pages/Menu/script";
 
 document.addEventListener("DOMContentLoaded", () => {
-  menuAnimations();
+  
   anime({
     targets: "#textos-izq .txt",
     opacity: 1,
@@ -28,4 +28,5 @@ document.addEventListener("DOMContentLoaded", () => {
     duration: 5000,
     delay: 500, // increase delay by 100ms for each elements.
   });
+  menuAnimations();
 });

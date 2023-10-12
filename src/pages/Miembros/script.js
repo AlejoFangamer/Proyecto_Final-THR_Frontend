@@ -1,7 +1,7 @@
 import { menuAnimations } from "../Menu/script.js";
 import { getAllMembers } from "./src/getAllMembers.js";
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   menuAnimations();
-  getAllMembers();
+  await getAllMembers();
 });

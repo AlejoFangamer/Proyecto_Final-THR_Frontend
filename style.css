@@ -25,7 +25,6 @@ main {
   height: calc(100vh - var(--menu-size) + (var(--menu-margin)) / 2 - 40px - 100px);
   position: relative;
   top: calc(var(--menu-size) + (var(--menu-margin)) / 2);
-  overflow: hidden;
   z-index: 998;
 }
 

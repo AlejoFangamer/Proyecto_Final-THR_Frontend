@@ -25,7 +25,7 @@
     <header>
       <div id="menu">
         <div class="menu-left-side">
-          <img src="../Menu/THRLogo.jpg" alt="" class="menu-icon" />
+          <img src="/THRLogo.jpg" alt="" class="menu-icon" />
           <h2 class="menu-titulo">TEAM HAPPY RINGO</h2>
         </div>
 
@@ -48,24 +48,21 @@
       <div id="miembros">
         <section class="titulo-desc">
           <h1 class="titulo">Miembros</h1>
-          <p>Bienvenido a nuestro Blog !</p>
-          <p>
-            Donde compartimos las noticias de nuestros proyectos y mas sobre el
-            mundo del desarrollo de videojuegos
-          </p>
+          <p>Aqui presentamos quienes somos en el equipo !</p>
         </section>
 
 				<section class="miembros-list">
 					<ul id="mem-lista"></ul>
           <template id="mem-template">
             <li class="mem-item">
-              <div class="info-container">
                 <div class="img-container">
                   <img class="mem-imagen" src="" alt="" />
                 </div>
                 <div class="mem-info-container">
                   <h2 class="mem-nombre"></h2>
-                  <p class="mem-rol"></p>
+                  <div class="roles">
+                    <p class="mem-rol"></p>
+                  </div>
                 </div>
               </div>
             </li>
@@ -73,6 +70,15 @@
 				</section>
       </div>
     </main>
+
+    <div id="member-info">
+      <div class="info-mem">
+        <h2 class="info-nombre">Hola</h2>
+      </div>
+      <div class="img-mem">
+        <img src="" alt="">
+      </div>
+    </div>
     <div id="pause"></div>
     <script src="script.js" type="module"></script>
   </body>
