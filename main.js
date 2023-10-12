@@ -1,6 +1,8 @@
 import anime from "animejs";
+import { menuAnimations } from "./src/pages/Menu/script";
 
 document.addEventListener("DOMContentLoaded", () => {
+  menuAnimations();
   anime({
     targets: "#textos-izq .txt",
     opacity: 1,
