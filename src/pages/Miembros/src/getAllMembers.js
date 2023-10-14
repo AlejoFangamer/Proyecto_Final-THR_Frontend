@@ -1,6 +1,6 @@
-import anime from "animejs";
 import ScrollReveal from "scrollreveal";
 import { containerOverlay } from "./containerOverlayCtr";
+import { obtenerColor } from "./roleColorManage";
 
 export function getAllMembers() {
   const memList = document.getElementById("mem-lista");
@@ -20,7 +20,16 @@ export function getAllMembers() {
         image.src = post.img_mem;
         image.alt = post.nombre_mem;
 
-        const image_container = listItem.querySelector(".img-container");
+        post.role_mem.forEach((e) => {
+          const roleList = listItem.querySelector(".roles");
+          const role = document.createElement("p");
+          role.textContent = e;
+
+          role.classList.add("rol",obtenerColor(role.textContent));
+
+          roleList.append(role);
+        })
+
         memList.appendChild(listItem);
 
         ScrollReveal().reveal(".mem-item", {
@@ -29,6 +38,7 @@ export function getAllMembers() {
           delay: 200, // Retraso en milisegundos
           interval: 200,
           duration: 1000, // Duración de la animación en milisegundos
+          container: '#miembros' 
         });
       }
 
