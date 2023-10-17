@@ -6,6 +6,19 @@
   /*scrollbar-gutter: stable both-edges;*/
 }
 
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px; /* Ancho de la barra del scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color del pulgar del scrollbar */
+  border-radius: 25px; /* Borde redondeado del pulgar del scrollbar */
+}
+
 #background {
   position: fixed;
   width: 100%;
@@ -31,12 +44,15 @@ main {
   align-items: center;
   padding: 50px;
   border-radius: 25px;
+  height: calc(98vh - (var(--menu-size) + (var(--menu-margin))));
+
 
   max-width: 1000px;
   gap: 50px;
   z-index: 999;
   background-color: white;
-  overflow: hidden;
+  overflow-y: scroll;
+  scrollbar-gutter: stable both-edges;
 }
 
 .titulo-desc {
@@ -187,3 +203,4 @@ button {
   background: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
   z-index: 9999; /* Asegura que esté por encima de otros elementos */
 }
+

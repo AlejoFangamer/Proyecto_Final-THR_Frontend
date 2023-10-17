@@ -128,9 +128,10 @@ main {
 
 #member-info .info-mem {
   opacity: 100%;
-  padding: 50px clamp(20vw,20vw,10vw);
+  padding: 50px;
   height: 400px;
-  width: 100vw;
+  width: 100%;
+  max-width: 1000px;
   transform: scaleY(0%);
   background-color: aliceblue;
 }

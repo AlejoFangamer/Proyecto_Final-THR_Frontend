@@ -93,11 +93,14 @@ main {
   display: flex;
   justify-content: end;
   overflow: hidden; /* Recorta el contenido que se desborda del contenedor */
+  transform: scale(110%);
+
 }
 
 .img-der-img {
   width: 100%;
   max-width: 500px;
+  
 }
 
 .textos-btn {
