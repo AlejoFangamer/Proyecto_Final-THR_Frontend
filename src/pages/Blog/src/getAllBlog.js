@@ -56,6 +56,7 @@ export function getAllBlog() {
           delay: 200, // Retraso en milisegundos
           interval: 200,
           duration: 1000, // Duración de la animación en milisegundos
+          container: "#blog-lista",
         });
       }
       loadingMessage.style.display = "none";

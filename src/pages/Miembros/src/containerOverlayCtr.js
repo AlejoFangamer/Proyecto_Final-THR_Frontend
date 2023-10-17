@@ -34,6 +34,8 @@ export function containerOverlay(member) {
       nombreEle.textContent = member[indexSelected].nombre_mem;
       const imgEle = contenedor.querySelector("img");
       imgEle.src = member[indexSelected].img_mem;
+      const descEle = contenedor.querySelector(".info-desc");
+      descEle.textContent = member[indexSelected].info_mem;
       const localEle = contenedor.querySelector(".info-local-text");
       localEle.textContent = member[indexSelected].pais_mem;
 
@@ -52,37 +54,39 @@ export function containerOverlay(member) {
 
 function iniciar() {
   anime.remove("#member-info-container");
-  anime.remove(".img-mem img");
+  anime.remove(".img-mem-getreal");
   anime({
     targets: "#member-info-container",
     scaleY: ["100%", "0%"],
-    duration: 500,
-    elasticity: 50,
+    duration: 200,
+    easing: "easeOutExpo",
   });
   anime({
-    targets: ".img-mem img",
-    translateX: ["0%", "50%"],
+    targets: ".img-mem-getreal",
+    right: ["0%", "-150%"],
+    rotate: ["-10deg", "45deg"],
     duration: 500,
-    easing: "easeOutExpo",
+    easing: "easeInExpo",
   });
 }
 
 function finalizar() {
   anime.remove("#member-info-container");
-  anime.remove(".img-mem img");
+  anime.remove(".img-mem-getreal");
   anime({
-    targets: ".img-mem img",
-    scale: ["50%", "100%"],
-    rotate: ["0deg", "-10deg"],
-    translateX: ["50%", "0%"],
+    targets: ".img-mem-getreal",
+    //scale: ["50%", "100%"],
+    rotate: ["45deg", "-10deg"],
+    right: ["-150%", "0%"],
     duration: 1000,
-    easing: "easeOutExpo",
+    easing: "easeOutBack",
   });
 
   anime({
     targets: "#member-info-container",
-    scaleY: ["0%", "100%"],
+    scaleY: "100%",
+    skewY: ["15deg", "0deg"],
+    easing: "easeOutElastic",
     duration: 1000,
-    elasticity: 200,
   });
 }

@@ -1,0 +1,22 @@
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px; /* Ancho de la barra del scrollbar */
+}
+
+::-webkit-scrollbar:hover {
+  opacity: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  opacity: 0.5;
+  background: #6363634d; /* Color del pulgar del scrollbar */
+  border-radius: 25px; /* Borde redondeado del pulgar del scrollbar */
+  transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a5a5a5; /* Color del pulgar del scrollbar */
+}

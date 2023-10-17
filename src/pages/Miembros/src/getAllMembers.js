@@ -1,6 +1,4 @@
-
 import { containerOverlay } from "./containerOverlayCtr";
-
 import { crearPost } from "./PostAllMembers";
 
 export function getAllMembers() {

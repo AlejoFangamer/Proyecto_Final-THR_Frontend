@@ -37,6 +37,8 @@ header {
   align-items: center;
   height: 100%;
   gap: 20px;
+  text-decoration: none;
+  color: black;
 }
 
 #menu-nav {
