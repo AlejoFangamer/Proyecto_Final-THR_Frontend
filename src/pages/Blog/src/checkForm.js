@@ -1,7 +1,6 @@
+import { mostrarPantallaDeCarga, ocultarPantallaDeCarga } from "./loadingFun";
+
 const formulario = document.getElementById("miFormulario");
-
-import { mostrarPantallaDeCarga, ocultarPantallaDeCarga } from "./src/loadingFun.js";
-
 export function initFormulario() {
   formulario.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -44,7 +43,6 @@ export function checkInputs() {
   const submitButton = document.getElementById("submitBtn");
 
   const validateFields = () => {
-    const isURLValid = urlInput.value.trim() !== "";
     const isNameValid = tituloInput.value.trim() !== "";
     const isAutorValid = autorInput.value.trim() !== "";
     const isDescValid = descInput.value.trim() !== "";
