@@ -185,7 +185,7 @@ button {
 }
 
 #loading-overlay {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -197,3 +197,35 @@ button {
   z-index: 9999; /* Asegura que esté por encima de otros elementos */
 }
 
+@media screen and (max-width: 730px) {
+  #blog {
+    padding: 40px;
+    gap: 20px;
+  }
+
+  .titulo {
+    content: "Hola";
+    line-height: 1em;
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+
+  .aut-img {
+    flex-direction: column;
+  }
+
+  #blog-lista {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .blog-titulo{
+    text-align: center;
+  }
+
+  .author-date-container {
+    text-align: center;
+  }
+}
