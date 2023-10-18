@@ -20,8 +20,8 @@
   height: 100vh;
   background: linear-gradient(
     45deg,
-    rgba(112, 71, 136, 1) 0%,
-    rgb(255, 213, 135) 100%
+    #704788 0%,
+    rgb(135, 255, 189) 100%
   );
   z-index: -1;
 }

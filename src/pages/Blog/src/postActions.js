@@ -1,3 +1,4 @@
+import { btnAnims } from "./buttonsAnimations";
 import { mostrarPantallaDeCarga, ocultarPantallaDeCarga } from "./loadingFun";
 import { updateBlog } from "./updateBlog";
 
@@ -5,6 +6,9 @@ export function postActions() {
     const del = document.querySelectorAll(".erase");
     const edit = document.querySelectorAll(".edit");
     const save = document.querySelectorAll(".edit-confirm");
+    btnAnims(del);
+    btnAnims(edit);
+    btnAnims(save);
     console.log(del)
       del.forEach((del) => {
         del.addEventListener("click", (e) => {

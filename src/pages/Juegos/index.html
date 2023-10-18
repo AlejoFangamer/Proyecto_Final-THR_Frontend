@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Happy Ringo - Miembros</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link href="dist/hamburgers.css" rel="stylesheet"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css"
+      integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../Menu/styles.css" />
+    <link rel="stylesheet" href="../scrollbar-style/scroll-style.css">
+  </head>
+  <body>
+    <div id="background"></div>
+
+    <header>
+      <div id="menu">
+        <div class="menu-left-side">
+          <img src="/THRLogo.jpg" alt="" class="menu-icon" />
+          <h2 class="menu-titulo">TEAM HAPPY RINGO</h2>
+        </div>
+
+        <nav id="menu-nav">
+          <a href="" class="menu-option">Quienes Somos?</a>
+          <a href="" class="menu-option">Miembros</a>
+          <a href="" class="menu-option">Juegos</a>
+          <a href="" class="menu-option">Happy-Blog</a>
+        </nav>
+
+        <button class="hamburger hamburger--elastic" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <div id="miembros">
+        <section class="titulo-desc">
+          <h1 class="titulo">Juegos</h1>
+          <p>Nuestros proyectos desarrollados como equipo !</p>
+        </section>
+
+        <section class="miembros-list">
+          <ul id="mem-lista"></ul>
+          <template id="mem-template">
+            <li class="mem-item">
+              <div class="img-container">
+                <img class="mem-imagen" src="" alt="" />
+              </div>
+              <div class="mem-info-container">
+                <h2 class="mem-nombre"></h2>
+                <div class="roles"></div>
+              </div>
+            </li>
+          </template>
+        </section>
+      </div>
+    </main>
+
+    <div id="member-info">
+      <div id="member-info-container">
+        <div id="member-subdivision">
+          <div class="info-mem">
+            <h2 class="info-nombre">Hola</h2>
+            <div class="info-local">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-map-pin-filled"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z"
+                  stroke-width="0"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <p class="info-local-text"></p>
+            </div>
+            <p class="info-desc"></p>
+            <div class="roles-overlay"></div>
+          </div>
+          <div class="img-mem">
+            <img src="" alt="" class="img-mem-getreal"/>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="pause"></div>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
