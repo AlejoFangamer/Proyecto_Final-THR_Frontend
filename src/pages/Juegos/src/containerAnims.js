@@ -1,0 +1,1 @@
+const container = document.querySelectorAll("juego-lista");

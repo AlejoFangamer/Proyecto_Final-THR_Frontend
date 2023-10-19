@@ -39,7 +39,7 @@ main {
   padding: 20px;
 }
 
-#miembros {
+#juegos {
   position: relative;
   top: calc(var(--menu-size) + (var(--menu-margin)) / 2);
   display: flex;
@@ -66,19 +66,19 @@ main {
   font-size: 4em;
 }
 
-.miembros-list {
+.juegos-list {
   width: 100%;
 }
 
-#mem-lista {
+#juego-lista {
   display: grid;
   justify-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 3fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
   gap: 20px;
   list-style: none;
 }
 
-.mem-item {
+.juego-item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,30 +92,79 @@ main {
   border-radius: 20px;
   padding: 20px;
   transition: box-shadow 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  overflow: hidden;
 }
 
-.mem-item:hover {
-  box-shadow: 10px 10px rgb(156, 74, 6);
+.juego-item:hover {
+  box-shadow: 10px 10px rgb(5, 70, 45);
+}
+
+.state {
+  display: none;
+}
+
+.state.active {
+  display: block;
 }
 
 .img-container {
   position: relative;
   display: flex;
+  justify-content: center;
+  align-content: center;
   width: 100%;
   max-width: 200px;
   height: 200px;
   overflow: hidden;
   border-radius: 20px;
+  top: 0px;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.mem-info-container {
+.juego-item:hover .img-container {
+  top: -30px;
+}
+
+.juego-info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   text-align: center;
   padding: 0px 20px;
   border-radius: 15px;
 }
 
-#member-info {
+
+.juego-info-container .juego-nombre {
+  position: fixed;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  bottom: -50px;
+  color: white;
+}
+
+.juego-item:hover .juego-info-container .juego-nombre {
+  bottom: 20px;
+}
+
+.juego-item .item-grad {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    #00000096 0%,
+    rgba(0, 0, 0, 0) 50%
+  );
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.juego-item:hover .item-grad {
+  opacity: 1;
+}
+
+#juego-info {
   position: fixed;
   display: flex;
   align-items: center;
@@ -129,17 +178,36 @@ main {
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+.juego-item-background {
+  position: fixed;
+  top:0px;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(1px);
+  z-index: -1;
+  transform: scale(1.2);
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+.juego-item:hover .juego-item-background {
+  transform: scale(1.6);
+}
+
 #member-info-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: rgb(255, 240, 245);
+  background-color: rgb(240, 255, 247);
   min-height: 400px;
 }
 
-#member-info .info-mem {
+#juego-info .info-mem {
   display: flex;
   flex-direction: column;
   opacity: 100%;
@@ -177,7 +245,7 @@ main {
   right: 0;
   width: 250px;
   border-radius: 20px;
-  box-shadow: 10px 10px rgba(136, 1, 46, 0.425);
+  filter: drop-shadow(10px 10px 0rem rgb(4, 44, 35));
 }
 
 .info-nombre {
@@ -186,7 +254,7 @@ main {
   line-height: 1em;
 }
 
-#member-info.active {
+#juego-info.active {
   opacity: 1;
   pointer-events: auto;
 }
@@ -250,7 +318,7 @@ main {
 
 
 @media screen and (max-width: 730px) {
-  #miembros {
+  #juegos {
     padding: 20px;
     gap: 20px;
   }
@@ -259,7 +327,7 @@ main {
     font-size: 3em;
   }
 
-  #member-info .info-mem {
+  #juego-info .info-mem {
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -277,7 +345,7 @@ main {
     flex-direction: column;
   }
 
-  #mem-lista {
+  #juego-lista {
     width: 100%;
   }
 }
