@@ -104,6 +104,8 @@ main {
 }
 
 .textos-btn {
+  text-align: center;
+  text-decoration: none;
   margin-top: 15px;
   padding: 15px;
   background-color: #ff304c;

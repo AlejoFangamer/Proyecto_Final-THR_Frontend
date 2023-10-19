@@ -1,10 +1,7 @@
 :root {
   --color-rojo: rgb(129, 0, 17);
-  --color-azul: rgb(0, 67, 129);
   --color-verde: rgb(0, 129, 50);
   --color-amarillo: rgb(161, 112, 6);
-  --color-rosa: rgb(161, 6, 109);
-  --color-naranja: rgb(161, 68, 6);
 }
 
 * {
@@ -104,7 +101,21 @@ main {
 }
 
 .state.active {
-  display: block;
+  display: flex;
+  gap: 10px;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.state-dev {
+  border: 2px solid var(--color-amarillo);
+  color: var(--color-amarillo);
+  
+}
+
+.state-launch {
+  border: 2px solid var(--color-verde);
+  color: var(--color-verde);
 }
 
 .img-container {
@@ -183,6 +194,7 @@ main {
   top:0px;
   width: 100%;
   height: 100%;
+  background-clip: border-box;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -215,7 +227,7 @@ main {
   width: 100%;
   height: auto;
   max-width: 1000px;
-  gap: 5px;
+  gap: 10px;
 }
 
 #member-subdivision {
@@ -279,45 +291,24 @@ main {
 }
 
 .rol-overlay {
-  color: gray;
+  color: rgb(0, 0, 0);
   border: 2px solid black;
   border-radius: 25px;
   padding: 0px 10px;
   width: fit-content;
 }
 
-.rojo {
-  color: var(--color-rojo);
-  border-color: var(--color-rojo);
+#loading-juegos {
+  text-align: center;
+  width: 100%;
 }
-
-.azul {
-  color: var(--color-azul);
-  border-color: var(--color-azul);
-}
-
-.verde {
-  color: var(--color-verde);
-  border-color: var(--color-verde);
-}
-
-.amarillo {
-  color: var(--color-amarillo);
-  border-color: var(--color-amarillo);
-}
-
-.rosa {
-  color: var(--color-rosa);
-  border-color: var(--color-rosa);
-}
-
-.naranja {
-  color: var(--color-naranja);
-  border-color: var(--color-naranja);
-}
-
 
 @media screen and (max-width: 730px) {
+
+  body {
+    overflow: scroll;
+  }
+
   #juegos {
     padding: 20px;
     gap: 20px;
@@ -328,6 +319,7 @@ main {
   }
 
   #juego-info .info-mem {
+    position: relative;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -346,6 +338,8 @@ main {
   }
 
   #juego-lista {
+    display: flex;
+    flex-direction: column;
     width: 100%;
   }
 }

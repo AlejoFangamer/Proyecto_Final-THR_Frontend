@@ -248,6 +248,10 @@ main {
   border-color: var(--color-naranja);
 }
 
+#loading-miembros {
+  text-align: center;
+  width: 100%;
+}
 
 @media screen and (max-width: 730px) {
   #miembros {

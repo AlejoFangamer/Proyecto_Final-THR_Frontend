@@ -47,7 +47,16 @@ export function checkInputs() {
     const isAutorValid = autorInput.value.trim() !== "";
     const isDescValid = descInput.value.trim() !== "";
 
-    if (isNameValid && isAutorValid && isDescValid) {
+    //rango de 600 caracteres para la descripción
+    const isDescLengthValid = descInput.value.trim().length <= 600;
+
+    //rango de 80 caracteres para el autor
+    const isAutorLengthValid = autorInput.value.trim().length <= 80;
+
+    //rango de 100 caracteres para el titulo
+    const isTituloLengthValid = tituloInput.value.trim().length <= 100;
+
+    if (isNameValid && isAutorValid && isDescValid && isDescLengthValid && isAutorLengthValid && isTituloLengthValid) {
       submitButton.disabled = false;
     } else {
       submitButton.disabled = true;
