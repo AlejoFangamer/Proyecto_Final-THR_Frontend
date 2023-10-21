@@ -6,6 +6,10 @@
   /*scrollbar-gutter: stable both-edges;*/
 }
 
+html.sr main {
+  visibility: hidden;
+}
+
 body {
   overflow: hidden;
 }

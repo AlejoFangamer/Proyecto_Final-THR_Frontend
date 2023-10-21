@@ -26,6 +26,14 @@
   z-index: -1;
 }
 
+html.sr main {
+  visibility: hidden;
+}
+
+html.sr .mem-item {
+  visibility: hidden;
+}
+
 body {
   overflow: hidden;
 }
